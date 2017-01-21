@@ -15,7 +15,7 @@ class PlayState extends FlxState
 		Reg.parlante = new Parlante(FlxG.width / 2, FlxG.height / 2);
 		//Reg.pared = new Pared(FlxG.width / 2 + 100, FlxG.height / 2);
 		Reg.interfaz = new Interfaz();
-		//Reg.herramienta1 = new Herramienta1(500, 300);
+		Reg.herramienta1 = new Herramienta1(500, 300);
 		//Reg.meta = new Meta(FlxG.width / 2 + 100, FlxG.height / 2);
 	}
 

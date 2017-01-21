@@ -4,6 +4,8 @@ import flixel.FlxSprite;
 import flixel.system.FlxAssets.FlxGraphicAsset;
 import flixel.math.FlxMath;
 import flixel.FlxG;
+import flixel.util.FlxCollision;
+import flixel.FlxObject;
 
 /**
  * ...
@@ -25,11 +27,14 @@ class Ondas extends FlxSprite
 	override public function update(elapsed:Float):Void 
 	{
 		super.update(elapsed);
+		if (FlxG.pixelPerfectOverlap(Reg.herramienta1, this))
+		{
+			FlxObject.separate(Reg.herramienta1, this);
+		}
 		if (!isOnScreen())
 		{
 			destroy();
 		}
-		FlxG.collide(this, Reg.herramienta1);
 		if (FlxG.overlap(this, Reg.meta))
 		{
 			Reg.contMeta++;
