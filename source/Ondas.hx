@@ -19,6 +19,7 @@ class Ondas extends FlxSprite
 		velocity.x = Reg.velocidadOnda * FlxMath.fastCos(angle);
 		velocity.y = Reg.velocidadOnda * FlxMath.fastSin(angle);
 		FlxG.state.add(this);
+		elasticity = 1;
 	}
 	
 	override public function update(elapsed:Float):Void 
@@ -28,5 +29,6 @@ class Ondas extends FlxSprite
 		{
 			destroy();
 		}
+		FlxG.collide(this, Reg.herramienta1);
 	}
 }

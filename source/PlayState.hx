@@ -13,7 +13,7 @@ class PlayState extends FlxState
 	{
 		super.create();
 		var parlante = new Parlante(FlxG.width/2, FlxG.height/2);
-		
+		Reg.herramienta1 = new Herramienta1(500, 300);
 	}
 
 	override public function update(elapsed:Float):Void
