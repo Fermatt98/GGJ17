@@ -30,5 +30,14 @@ class Ondas extends FlxSprite
 			destroy();
 		}
 		FlxG.collide(this, Reg.herramienta1);
+		if (FlxG.overlap(this, Reg.meta))
+		{
+			Reg.contMeta++;
+			destroy();
+		}
+		if (FlxG.overlap(this, Reg.pared))
+		{
+			destroy();
+		}
 	}
 }

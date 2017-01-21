@@ -8,15 +8,14 @@ import flixel.FlxG;
  * ...
  * @author ...
  */
-class Herramienta1 extends FlxSprite
+class Pared extends FlxSprite
 {
 
 	public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset) 
 	{
 		super(X, Y, SimpleGraphic);
-		makeGraphic(16, 64);
+		makeGraphic(64, 128);
 		FlxG.state.add(this);
-		immovable = true;
 	}
 	
 }
