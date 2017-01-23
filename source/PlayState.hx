@@ -6,6 +6,8 @@ import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 import flixel.math.FlxMath;
+import flixel.addons.nape.FlxNapeSprite;
+import flixel.addons.nape.FlxNapeSpace;
 
 class PlayState extends FlxState
 {
@@ -17,6 +19,7 @@ class PlayState extends FlxState
 		Reg.interfaz = new Interfaz();
 		Reg.herramienta1 = new Herramienta1(500, 300);
 		//Reg.meta = new Meta(FlxG.width / 2 + 100, FlxG.height / 2);
+		FlxG.debugger.visible = true;
 	}
 
 	override public function update(elapsed:Float):Void
